@@ -1,0 +1,41 @@
+$bordercolor: #3f8557;
+$buttonborder: #264348;
+$mainblue: #051742;
+$text: #54b061;
+$milgreen: #1b3b1a;
+
+.packages {
+    float: left;
+}
+
+.packageButton {
+    width: 14em;
+    height: 20em;
+    margin-right: 2em;
+    border-style: solid;
+    border-radius: 1em;
+    border-width: 0.2em;
+    color: $text;
+    background-color: $mainblue;
+    border-color: $buttonborder;
+}
+
+.packageButtons {
+    align-content: space-between;
+}
+
+.descriptionContainer {
+    height: 12em;
+    background-color: $milgreen;
+    border-radius: 1em;
+    text-align: left;
+    margin-top: 1em;
+}
+
+.description {
+    padding-top: 1em;
+}
+
+.packageProperties {
+    margin-top: 1em;
+}

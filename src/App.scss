@@ -7,6 +7,13 @@
   pointer-events: none;
 }
 
+
+h4 {
+  text-align: left;
+  margin-block-start: 0.8em;
+  margin-block-end: 0.8em;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #051742;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

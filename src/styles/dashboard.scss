@@ -1,0 +1,64 @@
+$bordercolor: #3f8557;
+$mainblue: #051742;
+$text: #54b061;
+$milgreen: #1b3b1a;
+
+@font-face {
+    font-family: SpcShip;
+    src: url('../styles/fonts/Aaargh.ttf');
+    font-weight: 900;
+}
+
+h5 {
+    float: left;
+}
+
+.totalprice {
+    margin-left: 1em;
+    h3 {
+        float: left;
+    }
+}
+
+.container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-family: SpcShip;
+    display: inline-block;
+    width: 40em;
+    height: 38em;
+    border-style: solid;
+    border-radius: 1em;
+    border-width: 0.09em;
+    color: $text;
+    background-color: $mainblue;
+    border-color: $bordercolor;
+
+}
+
+.selections {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 0;
+}
+
+.priceDashboard {
+    float: right;
+    width: 15em;
+    height: 11em;
+    margin-top: 3em;
+    margin-right: 1em;
+    border-style: solid;
+    border-radius: 1em;
+    border-width: 0.09em;
+    background-color: $milgreen;
+}
+
+.properties {
+    padding-left: 1em;
+    text-align: left;
+    font-size: x-large;
+    justify-content: space-around;
+}
+

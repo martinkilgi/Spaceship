@@ -1,0 +1,23 @@
+$bordercolor: #3f8557;
+$buttonborder: #264348;
+$mainblue: #051742;
+$text: #54b061;
+
+
+
+.powers {
+    float: left;
+}
+
+
+.powerButton {
+    width: 14em;
+    height: 7em;
+    margin-right: 2em;
+    border-style: solid;
+    border-radius: 1em;
+    border-width: 0.2em;
+    color: $text;
+    background-color: $mainblue;
+    border-color: $buttonborder;
+}
