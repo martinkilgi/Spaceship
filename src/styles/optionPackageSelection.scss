@@ -1,4 +1,5 @@
 $bordercolor: #3f8557;
+$activeborder: #7BF762;
 $buttonborder: #264348;
 $mainblue: #051742;
 $text: #54b061;
@@ -9,31 +10,54 @@ $milgreen: #1b3b1a;
 }
 
 .packageButton {
-    width: 14em;
-    height: 20em;
+    width: 10em;
+    height: 14.1em;
     margin-right: 2em;
     border-style: solid;
-    border-radius: 1em;
-    border-width: 0.2em;
+    border-radius: 8px;
+    border-width: 3px;
     color: $text;
     background-color: $mainblue;
     border-color: $buttonborder;
+
+    .descriptionContainer {
+        height: 18.5em;
+        background-color: $milgreen;
+        border-radius: 8px;
+        text-align: left;
+        font-size: medium;
+        line-height: 40px;
+        margin-top: 1em;
+    }
+
+    &.selected {
+        border-color: $activeborder;
+    }
 }
+
 
 .packageButtons {
-    align-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    float: left;
+
+    li {
+        list-style: none;
+    }
 }
 
-.descriptionContainer {
-    height: 12em;
-    background-color: $milgreen;
-    border-radius: 1em;
-    text-align: left;
-    margin-top: 1em;
-}
 
 .description {
     padding-top: 1em;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        list-style: triangle inside url('../../public/icons/image\ 1.png');
+    }
 }
 
 .packageProperties {

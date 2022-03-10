@@ -1,28 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/powerSelection.scss'
 
 
-const powerSelection: React.FC<any> = ({powerPrice}) => {
+const PowerSelection: React.FC<any> = ({powerPrice}) => {
+
+    const [selected, setSelected] = useState<string>("");
 
     return (
         <div className='powers'>
             <h4>Select power:</h4>
-            <div className='powerButtons'>
-                <button className='powerButton' onClick={() => powerPrice(0)}>
-                    <h3>100 MW</h3>
-                    +0€
-                </button>
-                <button className='powerButton' onClick={() => powerPrice(200)}>
-                    <h3>150 MW</h3>
-                    +200€
-                </button>
-                <button className='powerButton' onClick={() => powerPrice(500)}>
-                    <h3>200 MW</h3>
-                    +500€
-                </button>
-            </div>
+            <ul className='powerButtons'>
+                <li className={selected == '100mw' ? 'powerButton selected' : 'powerButton'} onClick={() => {powerPrice(0); setSelected("100mw")}}>
+                    <div className='description'>
+                        100 MW
+                        <br></br>
+                        +0€
+                    </div>
+                </li>
+                <li className={selected == '150mw' ? 'powerButton selected' : 'powerButton'} onClick={() => {powerPrice(200); setSelected("150mw")}}>
+                    <div className='description'>
+                        150 MW
+                        <br></br>
+                        +200€
+                    </div>
+                </li>
+                <li className={selected == '200mw' ? 'powerButton selected' : 'powerButton'} onClick={() => {powerPrice(500); setSelected("200mw")}}>
+                    <div className='description'>
+                        200 MW
+                        <br></br>
+                        +500€
+                    </div>
+                </li>
+            </ul>
         </div>
     );
 }
 
-export default powerSelection;
+export default PowerSelection;

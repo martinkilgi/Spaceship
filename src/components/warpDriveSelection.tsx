@@ -1,24 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/warpDriveSelection.scss'
 
 
-const warpDriveSelection: React.FC<any> = ({warpDrivePrice}) => {
+const WarpDriveSelection: React.FC<any> = ({warpDrivePrice}) => {
+
+    const [selected, setSelected] = useState<string>("");
 
     return (
         <div className='warpDrives'>
             <h4>Select warp drive:</h4>
-            <div className='warpButtons'>
-                <button className='warpButton' onClick={() => warpDrivePrice(0)}>
-                    <h3>No</h3>
-                    +0€
-                </button>
-                <button className='warpButton' onClick={() => warpDrivePrice(1000)}>
-                    <h3>Yes</h3>
-                    +1000€
-                </button>
-            </div>
+            <ul className='warpButtons'>
+                <li className={selected == 'no' ? 'warpButton selected' : 'warpButton'} onClick={() => {warpDrivePrice(0); setSelected('no')}}>
+                    <div className='description'>
+                        No
+                        <br></br>
+                        +0€
+                    </div>
+                </li>
+                <li className={selected == 'yes' ? 'warpButton selected' : 'warpButton'} onClick={() => {warpDrivePrice(1000); setSelected('yes')}}>
+                    <div className='description'>
+                        Yes
+                        <br></br>
+                        +1000€
+                    </div>
+                </li>
+            </ul>
         </div>
     );
 }
 
-export default warpDriveSelection;
+export default WarpDriveSelection;

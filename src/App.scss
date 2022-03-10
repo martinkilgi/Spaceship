@@ -1,5 +1,23 @@
+@import 'styles/extra';
+
+
+
+@font-face {
+  font-family: SpcShip;
+  src: url('./styles/fonts/RobotoMono-Light.ttf');
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31.65px;
+}
+
+button {
+  font-family: SpcShip;
+}
+
+
 .App {
   text-align: center;
+  font-family: SpcShip !important;
 }
 
 .App-logo {

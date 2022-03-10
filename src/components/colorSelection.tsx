@@ -3,28 +3,30 @@ import '../styles/colorSelection.scss'
 
 const ColorSelection: React.FC<any> = ({colorPrice}) => {
 
+    const [selected, setSelected] = useState<string>("");
+
     return (
         <div className='colors'>
             <div className='colorHeader'>
                 <h4>Select color:</h4>
             </div>
-            <div className='colorButtons'>
-                <button className='colorButton' onClick={() => colorPrice(0)}>
+            <ul className='colorButtons'>
+                <li className={selected == 'snow' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(0); setSelected("snow")}}>
                     <div className='snowColor'></div>
                     +0€
-                    <h3>Snow</h3>
-                </button>
-                <button className='colorButton' onClick={() => colorPrice(100)}>
+                    <h5>Snow</h5>
+                </li>
+                <li className={selected == 'volcano' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(100); setSelected("volcano")}}>
                     <div className='volcanoColor'></div>
                     +100€
-                    <h3>Volcano</h3>
-                </button>
-                <button className='colorButton' onClick={() => colorPrice(100)}>
+                    <h5>Volcano</h5>
+                </li>
+                <li className={selected == 'sky' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(100); setSelected("sky")}}>
                     <div className='skyColor'></div>
                     +100€
-                    <h3>Sky</h3>
-                </button>
-            </div>
+                    <h5>Sky</h5>
+                </li>
+            </ul>
         </div>  
     );
 }

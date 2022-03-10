@@ -3,16 +3,6 @@ $mainblue: #051742;
 $text: #54b061;
 $milgreen: #1b3b1a;
 
-@font-face {
-    font-family: SpcShip;
-    src: url('../styles/fonts/Aaargh.ttf');
-    font-weight: 900;
-}
-
-h5 {
-    float: left;
-}
-
 .totalprice {
     margin-left: 1em;
     h3 {
@@ -23,10 +13,9 @@ h5 {
 .container {
     margin-top: 2em;
     margin-bottom: 2em;
-    font-family: SpcShip;
     display: inline-block;
-    width: 40em;
-    height: 38em;
+    width: 59em;
+    height: 53em;
     border-style: solid;
     border-radius: 1em;
     border-width: 0.09em;
@@ -41,6 +30,10 @@ h5 {
     flex-direction: column;
     margin-left: 40px;
     margin-right: 0;
+
+    h5 {
+        float: left;
+    }
 }
 
 .priceDashboard {
