@@ -11,17 +11,17 @@ const ColorSelection: React.FC<any> = ({colorPrice}) => {
                 <h4>Select color:</h4>
             </div>
             <ul className='colorButtons'>
-                <li className={selected == 'snow' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(0); setSelected("snow")}}>
+                <li data-testid='snowcolor' className={selected == 'snow' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(0); setSelected("snow")}}>
                     <div className='snowColor'></div>
                     +0€
                     <h5>Snow</h5>
                 </li>
-                <li className={selected == 'volcano' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(100); setSelected("volcano")}}>
+                <li data-testid='volcanocolor' className={selected == 'volcano' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(100); setSelected("volcano")}}>
                     <div className='volcanoColor'></div>
                     +100€
                     <h5>Volcano</h5>
                 </li>
-                <li className={selected == 'sky' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(100); setSelected("sky")}}>
+                <li data-testid='skycolor' className={selected == 'sky' ? 'colorButton selected' : 'colorButton'} onClick={() => {colorPrice(100); setSelected("sky")}}>
                     <div className='skyColor'></div>
                     +100€
                     <h5>Sky</h5>

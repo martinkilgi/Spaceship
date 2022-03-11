@@ -11,7 +11,7 @@ const OptionPackageSelection: React.FC<any> = ({packagePrice}) => {
             <h4>Select option package:</h4>
             <div>
                 <ul className='packageButtons'>
-                    <li tabIndex={0} className={selected == 'basic' ? 'packageButton selected' : 'packageButton'} onClick={() => {packagePrice(0); setSelected("basic")}}>
+                    <li data-testid='packagebasic' tabIndex={0} className={selected == 'basic' ? 'packageButton selected' : 'packageButton'} onClick={() => {packagePrice(0); setSelected("basic")}}>
                         <h3>Basic</h3>
                         +0€
                         <div className='descriptionContainer'>
@@ -25,7 +25,7 @@ const OptionPackageSelection: React.FC<any> = ({packagePrice}) => {
                         </div>
                         
                     </li>
-                    <li tabIndex={0} className={selected == 'sport' ? 'packageButton selected' : 'packageButton'} onClick={() => {packagePrice(100); setSelected("sport")}}>
+                    <li data-testid='packagesport' tabIndex={0} className={selected == 'sport' ? 'packageButton selected' : 'packageButton'} onClick={() => {packagePrice(100); setSelected("sport")}}>
                         <h3>Sport</h3>
                         +100€
                         <div className='descriptionContainer'>
@@ -39,7 +39,7 @@ const OptionPackageSelection: React.FC<any> = ({packagePrice}) => {
                             </div>
                         </div>
                     </li>
-                    <li tabIndex={0} className={selected == 'lux' ? 'packageButton selected' : 'packageButton'} onClick={() => {packagePrice(500); setSelected("lux")}}>
+                    <li data-testid='packagelux' tabIndex={0} className={selected == 'lux' ? 'packageButton selected' : 'packageButton'} onClick={() => {packagePrice(500); setSelected("lux")}}>
                         <a href="#"></a>
                         <h3>Lux</h3>
                         +500€

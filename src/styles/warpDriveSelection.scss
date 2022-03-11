@@ -6,7 +6,7 @@
 
 .warpButton {
     width: 10em;
-    height: 4em;
+    min-height: 4em;
     margin-right: 2em;
     border-style: solid;
     border-radius: 8px;
@@ -17,11 +17,11 @@
     
     .description {
         padding-top: 18px;
-        line-height: 50px;
     }
 
     &.selected {
         border-color: $activeborder;
+        box-shadow: 0 0 14px $activeborder;
     }
 }
 

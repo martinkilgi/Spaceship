@@ -4,10 +4,9 @@
     float: left;
 }
 
-
 .powerButton {
     width: 10em;
-    height: 4em;
+    min-height: 4em;
     margin-right: 2em;
     border-style: solid;
     border-radius: 8px;
@@ -15,19 +14,22 @@
     color: $text;
     background-color: $mainblue;
     border-color: $buttonborder;
-
+    
     .description {
+        display: inline-block;
+        min-width: 4.3em;
         padding-top: 18px;
-        line-height: 50px;
     }
 
     &.selected {
         border-color: $activeborder;
+        box-shadow: 0 0 14px $activeborder;
     }
 }
 
 .powerButtons {
     display: flex;
     flex-direction: row;
+    text-align: center;
     padding: 0;
 }

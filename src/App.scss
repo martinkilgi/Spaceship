@@ -1,6 +1,5 @@
 @import 'styles/extra';
-
-
+@import 'styles/mixins';
 
 @font-face {
   font-family: SpcShip;
@@ -18,13 +17,9 @@ button {
 .App {
   text-align: center;
   font-family: SpcShip !important;
-}
+  overflow-y: hidden;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
 
 h4 {
   text-align: left;
@@ -32,21 +27,23 @@ h4 {
   margin-block-end: 0.8em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #051742;
-  min-height: 100vh;
-  display: flex;
+  height: 100%;
+  width: 100%;
+  display: table;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-left:auto;
+  margin-right:auto;
+
+  @include phone {
+    width: 400px;
+  }
+  
 }
 
 .App-link {
