@@ -1,15 +1,21 @@
-$phone-bp: 400px;
+$phone-bp: 600px;
 $tablet-bp: 768px;
 $desktop-bp: 1024px;
 
 @mixin phone {
-    @media (min-width: $phone-bp) and (max-width: 767px) {
+    @media only screen and (max-width: $phone-bp) {
         @content;
     }
 }
 
 @mixin tablet {
     @media (min-width: $tablet-bp) and (max-width: 950px) {
+        @content;
+    }
+}
+
+@mixin bigDesktop {
+    @media (min-width: $desktop-bp) and (max-width: 2000px) {
         @content;
     }
 }

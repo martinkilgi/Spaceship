@@ -3,6 +3,11 @@
 
 .totalprice {
     margin-left: 1em;
+    text-align: left;
+    padding-left: 1em;
+    margin-top: 1em;
+    text-align: left;
+    justify-content: space-around;
 
     h3 {
         float: left;
@@ -18,10 +23,13 @@
     border-style: solid;
     border-radius: 1em;
     border-width: 0.09em;
-    color: $text;
+    color: $notselected;
     background-color: $mainblue;
-    border-color: $bordercolor;
+    border-color: $notselected;
 
+    h4, h3{
+        color: $activeborder;
+    }
 }
 
 .selections {
@@ -77,4 +85,22 @@
 .totalPrice {
     @extend .price;
     margin-right: 1.8em;
+}
+
+@include phone {
+
+    .container {
+        min-height: 80em;
+        width: 25em;
+    }
+
+    .priceDashboard {
+        position: absolute;
+        top: 60em;
+        left: 3.5em;
+    }
+
+    .selections {
+        margin: auto;  
+    }
 }

@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
 import '../styles/colorSelection.scss'
 
-const ColorSelection: React.FC<any> = ({colorPrice}) => {
+interface Price {
+    colorPrice: (price: number) => void;
+}
+
+const ColorSelection: React.FC<Price> = ({colorPrice}) => {
 
     const [selected, setSelected] = useState<string>("");
 

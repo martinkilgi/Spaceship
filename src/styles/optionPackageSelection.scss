@@ -12,21 +12,23 @@
     border-style: solid;
     border-radius: 8px;
     border-width: 3px;
-    color: $text;
+    color: $notselected;
     background-color: $mainblue;
     border-color: $buttonborder;
 
     .descriptionContainer {
-        min-height: 20em;
+        display: block;
+        height: 24em;
         background-color: $milgreen;
         border-radius: 8px;
         text-align: left;
-        font-size: medium;
+        font-size: large;
         line-height: 2.5em;
         margin-top: 1em;
     }
 
     &.selected {
+        color: $activeborder;
         border-color: $activeborder;
         box-shadow: 0 0 14px $activeborder;
     }
@@ -58,4 +60,27 @@
 
 .packageProperties {
     margin-top: 1em;
+}
+
+@include phone {
+    .packageButton {
+        width: 6em;
+
+        .description {
+            font-size: 10px;
+        }
+
+        .descriptionContainer {
+            height: 18em;
+        }
+    }
+
+    .packageButtons {
+        padding-left: 1em;
+    }
+
+    .packageProperties {
+        padding-left: 20px;
+    }
+
 }

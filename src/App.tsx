@@ -1,7 +1,7 @@
 import './App.scss';
 import Dashboard from './components/dashboard';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">

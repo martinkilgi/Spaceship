@@ -1,4 +1,5 @@
 @import 'extra';
+@import 'mixins';
 
 .warpDrives {
     float: left;
@@ -11,15 +12,16 @@
     border-style: solid;
     border-radius: 8px;
     border-width: 3px;
-    color: $text;
+    color: $notselected;
     background-color: $mainblue;
-    border-color: $buttonborder;
+    border-color: $notselected;
     
     .description {
         padding-top: 18px;
     }
 
     &.selected {
+        color: $activeborder;
         border-color: $activeborder;
         box-shadow: 0 0 14px $activeborder;
     }
@@ -33,4 +35,21 @@
 
 ul {
     list-style: none;
+}
+
+@include phone {
+    .warpButton {
+        width: 6em;
+        height: 4em;
+    }
+
+    .warpButtons {
+        padding-left: 5em;
+    }
+
+    .warpDrives {
+        h4 {
+            padding-left: 3em;
+        }
+    }
 }

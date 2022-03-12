@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import '../styles/powerSelection.scss'
 
+interface PowerPriceProps {
+    powerPrice: (price: number) => void;
+}
 
-const PowerSelection: React.FC<any> = ({powerPrice}) => {
+const PowerSelection: React.FC<PowerPriceProps> = ({powerPrice}) => {
 
     const [selected, setSelected] = useState<string>("");
 

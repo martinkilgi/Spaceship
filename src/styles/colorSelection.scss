@@ -12,9 +12,9 @@
     border-style: solid;
     border-radius: 8px;
     border-width: 3px;
-    color: $text;
+    color: $notselected;
     background-color: $mainblue;
-    border-color: $buttonborder;
+    border-color: $notselected;
     padding-top: 1em;
 
     h5 {
@@ -27,6 +27,7 @@
     }
 
     &.selected {
+        color: $activeborder;
         border-color: $activeborder;
         box-shadow: 0 0 14px $activeborder;
     } 
@@ -46,7 +47,7 @@
     border-radius: 0.5em;
     margin-left: auto;
     margin-right: auto;
-
+    
 }
 
 .volcanoColor {
@@ -67,4 +68,23 @@
     border-radius: 0.5em;
     margin-left: auto;
     margin-right: auto;
+}
+
+@include phone {
+    .colorButton {
+        width: 6em;
+        height: 4em;
+    }
+
+    .colorButtons {
+        padding-left: 1em;
+    }
+
+    .skyColor, .volcanoColor, .snowColor {
+        width: 3em;
+    }
+
+    h4 {
+        text-align: center;
+    }
 }

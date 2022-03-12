@@ -1,8 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import '../styles/optionPackageSelection.scss'
 
+interface PackagePriceProps {
+    packagePrice: (price: number) => void;
+}
 
-const OptionPackageSelection: React.FC<any> = ({packagePrice}) => {
+const OptionPackageSelection: React.FC<PackagePriceProps> = ({packagePrice}) => {
 
     const [selected, setSelected] = useState<string>("");
 
@@ -23,7 +26,6 @@ const OptionPackageSelection: React.FC<any> = ({packagePrice}) => {
                                 </ul>
                             </div>
                         </div>
-                        
                     </li>
                     <li data-testid='packagesport' tabIndex={0} className={selected == 'sport' ? 'packageButton selected' : 'packageButton'} onClick={() => {packagePrice(100); setSelected("sport")}}>
                         <h3>Sport</h3>
@@ -63,6 +65,3 @@ const OptionPackageSelection: React.FC<any> = ({packagePrice}) => {
 }
 
 export default OptionPackageSelection;
-
-// style={{ borderColor: luxClicked ? '#7BF762' : '' }}
-

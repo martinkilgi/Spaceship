@@ -5,7 +5,7 @@ import PowerSelection from './powerSelection';
 import WarpDriveSelection from './warpDriveSelection';
 import OptionPackageSelection from './optionPackageSelection';
 
-const Dashboard: React.FC<any> = () => {
+const Dashboard: React.FC = () => {
 
     const [basePrice, setBasePrice] = useState<number>(1000);
     const [colorData, setColorData] = useState<number>(0);
@@ -20,19 +20,19 @@ const Dashboard: React.FC<any> = () => {
     }, [colorData, packageData, powerData, warpDriveData])
 
 
-    const colorPrice = (colordata: number) => {
+    const colorPrice = (colordata: number): void => {
         setColorData(colordata);
     }
 
-    const packagePrice = (packagedata: number) => {
+    const packagePrice = (packagedata: number): void => {
         setPackageData(packagedata);
     }
 
-    const powerPrice = (powerdata: number) => {
+    const powerPrice = (powerdata: number): void => {
         setPowerData(powerdata);
     }
 
-    const warpDrivePrice = (warpdrivedata: number) => {
+    const warpDrivePrice = (warpdrivedata: number): void => {
         setWarpDriveData(warpdrivedata);
     }
 
@@ -47,10 +47,10 @@ const Dashboard: React.FC<any> = () => {
                     <h5>Warp drive: <span data-testid='warpDrivePrice' className='price'>+{warpDriveData}€</span></h5>
                     <h5>Option package: <span data-testid='packagePrice' className='price'>+{packageData}€</span></h5>
                 </div>
-                <hr></hr>
-                <div className='properties'>
-                    <h3>Total: <span data-testid='totalPrice' className='totalPrice'>+{totalPrice}€</span></h3>
-                </div>
+                    <hr></hr>
+                    <div className="properties">
+                        <h3>Total: <span data-testid='totalPrice' className='totalPrice'>+{totalPrice}€</span></h3>
+                    </div>
             </div>
             <div className='selections'>
                 <div className='colorsel'>
@@ -59,7 +59,7 @@ const Dashboard: React.FC<any> = () => {
                 <div className='colorsel'>
                     <PowerSelection powerPrice={powerPrice}/>
                 </div>
-                <div className='colorsel'>
+                <div className='warpDriveSel'>
                     <WarpDriveSelection warpDrivePrice={warpDrivePrice}/>
                 </div>
                 <div className='colorsel'>
@@ -68,7 +68,6 @@ const Dashboard: React.FC<any> = () => {
                 
             </div>
         </div>
-
     );
 }
 

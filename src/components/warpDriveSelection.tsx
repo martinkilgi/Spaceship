@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import '../styles/warpDriveSelection.scss'
 
+interface WarpDrivePriceProps {
+    warpDrivePrice: (price: number) => void;
+}
 
-const WarpDriveSelection: React.FC<any> = ({warpDrivePrice}) => {
+const WarpDriveSelection: React.FC<WarpDrivePriceProps> = ({warpDrivePrice}) => {
 
     const [selected, setSelected] = useState<string>("");
 
