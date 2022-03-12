@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../App.tsx';
-import { mount } from 'enzyme';
 
 test('Select color and display correct price', () => {
     render(<App />);

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import App from '../App';
 import ColorSelection from '../components/colorSelection.tsx';
 import PowerSelection from '../components/powerSelection.tsx';
 import PackageSelection from '../components/optionPackageSelection.tsx';
